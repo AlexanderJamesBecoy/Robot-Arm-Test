@@ -1,7 +1,7 @@
 void SerialInit (void)
 {
   Serial.begin(9600);
-  Serial.println("Ready");
+  Serial.println("Ready to use!");
 }
 
 void SerialSetPWM (void)
@@ -10,7 +10,7 @@ void SerialSetPWM (void)
   {
     Serial.print("Input: ");
     Serial.println(Serial.readString());
-    String * outputs = ServoSetVal(Serial.readString());
+    static String * outputs = ServoSetVal(Serial.readString());
   
     Serial.print("Output: Servo ");
     Serial.print(outputs[0]);

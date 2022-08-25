@@ -39,7 +39,7 @@ void ServoRun(void)
 
 String * ServoSetVal (String command)
 {
-  String * outputs = new String[2];
+  static String * outputs = new String[2];
   outputs[0] = outputs[1] = -1;
   
   int index = command.lastIndexOf(",");
